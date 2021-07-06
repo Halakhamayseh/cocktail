@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    Cocatial APP
+                </li>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/favarite">favarite</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="main">
+            
+                <div class="object">
+                    <img src="<%=DetailesKey.strdinkthumb%>" alt="" srcset="">
+                    <h2>
+                        <%=DetailesKey.strdrink%>
+                    </h2>
+                    <div class="button"><button id="putBs">updata</button>
+                    <button id="putBc">close</button>
+                </div>
+               
+                    <form id="putF" action="/put/<%=DetailesKey.id%>?_method=put" method="POST">
+                        <input type="text" name="strdinkthumb" value="<%=DetailesKey.strdinkthumb%>">
+                        <input type="text" name="strdrink" value="<%=DetailesKey.strdrink%>">
+                        <button>Save</button>
+                    </form>
+                    <form action="/delete/<%=DetailesKey.id%>?_method=delete" method="POST">
+                        <button>delete </button>
+                    </form>
+
+                </div>
+  
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+
+</html>
